@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using MeusLivros.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace MeusLivros.Data
@@ -9,5 +10,7 @@ namespace MeusLivros.Data
             : base(options)
         {
         }
+
+        public DbSet<Livros> Livros { get; set; }
     }
 }
